@@ -1,0 +1,385 @@
+body {
+	font-family:"微软雅黑";
+	font-size:12px;
+	margin:0;
+	background-color: #F0F0F0;
+	border: 0;	
+}
+
+#container {
+	margin:0 auto;
+	width:900px;
+	line-height: 150%;
+	background-color: #F0F0F0;
+}
+#header {
+	height:680px;
+	background:#F0F0F0;
+}
+
+#mainContent {
+	height:430px;
+}
+#sidebar {
+	width:948px;
+	height:410px;
+	background-color: #F0F0F0;
+	border: 1px solid #e0e0e0;
+}
+
+
+#content {
+	margin:0 205px !important;
+	margin:0 202px;
+	height:900px;
+	background:#F0F0F0;
+}
+#footer {
+	height:199px;
+	background:#F0F0F0;
+	border: 1px solid #e0e0e0;
+}
+
+
+.STYLE2 {
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.STYLE3 {
+	font-size: 14px;
+	color: #000000;
+}
+.STYLE4 {
+	font-size: 14px;
+	color: #1880B3;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+.STYLE5 {
+	font-size: 16px;
+	color: #1880B3;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+.STYLE6 {
+	font-size: 12px;
+	color: #666666;
+	font-family: "微软雅黑";
+}
+.STYLE7 {
+	font-size: 12px;
+	color: #FF6600;
+	font-family: "微软雅黑";
+}
+.STYLE8 {
+	font-size: 12px;
+	color: #1880B3;
+	font-family: "微软雅黑";
+	text-decoration: underline;
+}
+.STYLE9 {
+	font-size: 12px;
+	color: #000000;
+	font-family: "微软雅黑";
+}
+.STYLE10 {
+	font-size: 14px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+}
+.STYLE11 {
+	font-size: 14px;
+	color: #999999;
+	font-family: "微软雅黑";
+}
+.STYLE12 {
+	font-size: 12px;
+	color: #1880B3;
+	font-family: "微软雅黑";
+}
+.title {
+	border-radius: 2px;
+	padding: 7px;
+	background-color: #e8e8e8;
+	margin: 5px 0px 0px 0px;
+}
+.busines {
+	border-radius: 2px;
+	border: 1px solid #b0b0b0;
+	padding: 7px;
+	margin: 5px 10px 8px 10px;
+	background-color: #FFFFFF;
+}
+.check {
+	border-radius: 2px;
+	border: 1px solid #1880B3;
+	padding: 7px;
+	margin: 5px 10px 8px 10px;
+	background-color: #F5F5F5;
+}
+
+.busine {
+	border-radius: 2px;
+	border: 1px solid #b0b0b0;
+	padding: 16px 20px;
+	margin: 5px 10px 8px 10px;
+	background-color: #FFFFFF;
+}
+.white {
+	padding: 12px 50px 7px 7px;
+	background-color: #FFFFFF;
+}
+.line {
+	border-bottom: 1px solid #cfcfcf;
+}
+.btn {
+	border-radius: 2px;
+	padding: 2px 15px 2px 15px;
+	background-color: #36a9e1;
+	margin: 0px;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.btn2 {
+	border-radius: 2px;
+	padding: 2px 15px 2px 15px;
+	background-color: #FF9900;
+	margin: 0px;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.btn3 {
+	border-radius: 2px;
+	padding: 5px 17px 5px 17px;
+	background-color: #1880b3;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.btn4 {
+	border-radius: 2px;
+	padding: 5px 17px 5px 17px;
+	background-color: #bdbdbd;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.tab1{
+	width:860px;
+}
+.technologymenu{
+	height:28px;
+	font-size:14px;
+}
+.technologymenu li{
+	float:left;
+	width:120px;
+	text-align:center;
+	line-height:28px;
+	height:28px;
+	cursor:pointer;
+	border-left:#ffffff solid 3px;
+	color:#333333;
+	overflow:hidden;
+	background:#e8e8e8;
+}
+.technologymenu li.off{
+	background:#36a9e1;
+	color:#FFFFFF;
+	border-bottom:none;
+}
+.menudiv{
+	height:28px;
+	border-left:#ffffff solid 3px;
+	background:#36a9e1;
+	color: #FFFFFF;
+}
+.menudiv div{
+	line-height:28px;
+}
+
+.tab2{
+	width:900px;
+}
+.men{
+	height:33px;
+	font-size:14px;
+}
+.men li{
+	float:left;
+	width:120px;
+	text-align:center;
+	line-height:28px;
+	height:33px;
+	cursor:pointer;
+	border-left:#F0F0F0 solid 3px;
+	color:#333333;
+	overflow:hidden;
+	background:#e8e8e8;
+}
+.men li.off{
+	background:#36a9e1;
+	color:#FFFFFF;
+	border-bottom:none;
+}
+.mendiv{
+	height:33px;
+	border-left:#F0F0F0 solid 3px;
+	background:#36a9e1;
+	color: #FFFFFF;
+}
+.mendiv div{
+	line-height:33px;
+}
+
+#tabs1{
+	text-align:left;
+	width:900px;
+}
+.menu1box{
+	position:relative;
+	overflow:hidden;
+	height:33px;
+	width:900px;
+	text-align:left;
+}
+#menu1{
+position:absolute;
+top:0;
+left:0;
+z-index:1;
+}
+#menu1 li{
+	float:left;
+	display:block;
+	cursor:pointer;
+	width:80px;
+	text-align:center;
+	height:36px;
+}
+#menu1 li.hover{
+	background-color: #FFFFFF;
+}
+.main1box{
+	clear:both;
+	margin-top:-1px;
+	height:400px;
+	width:900px;
+	background-color: #FFFFFF;
+}
+#main1 ul{
+display: none;
+}
+#main1 ul.block{
+display: block;
+}
+
+/*---------------------菜单样式----------------------------------*/
+#menu{
+	height:32px;
+	margin-top:8px;
+	background-color:#36a9e1;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+#menu ul{
+	margin:auto; width:778px; height:32px;
+	list-style-type:none; padding:0px; margin-top:0px; margin-bottom:0px;
+}
+.m_li{
+	float:left;
+	width:114px;
+	line-height:32px;
+	text-align:center;
+	margin-right:-2px;
+	margin-left:-2px;
+}
+.m_li a{
+	display:block; color:#FFFFFF; width:114px;
+}
+.m_line{
+	float:left; width:1px; height:32px;
+	line-height:32px;   /*ff下有效(图片垂直居中)*/
+}
+.m_line img{
+	margin-top:expression(( 32 - this.height ) / 2);   /*ie下有效(图片垂直居中)*/
+}
+.m_li_a{
+	float:left;
+	width:114px;
+	line-height:32px;
+	text-align:center;
+	padding-top:3px;
+	font-weight:bold;
+	background-image:url(images/menu_bg.jpg);
+	position:relative;
+	height:32px;
+	margin-top:-3px;
+	margin-right:-2px;
+	margin-left:-2px;
+}
+.m_li_a a{
+	display:block;
+	color:#36a9e1;
+	width:114px;
+}
+
+
+.smenu{
+	width:774px; margin:0px auto 0px auto; padding:0px; list-style-type:none; height:32px;
+}
+.s_li{
+	line-height:32px; width:auto; display:none; height:32px; 
+}
+.s_li_a{
+	line-height:32px; width:auto; display:block; height:32px; 
+}
+/*---------------------链接定义----------------------------------*/
+a {
+	color: #333333;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active{
+	text-decoration: none;
+}
+
+/* sdmenu */
+div.sdmenu{
+	width:860px;
+	margin:0 auto;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	padding-bottom:10px;
+	color:#36A9E1;
+}
+div.sdmenu div{
+	overflow:hidden;
+}
+div.sdmenu div:first-child{
+}
+div.sdmenu div.collapsed{height:28px;}
+div.sdmenu div span{
+	display:block;
+	height:15px;
+	line-height:15px;
+	overflow:hidden;
+	padding:5px 25px;
+	font-weight:bold;
+	color:#36a9e1;
+	background:url(images/expanded.gif) no-repeat 10px center;
+	cursor:pointer;
+}
+div.sdmenu div.collapsed span{
+	background-image:url(images/collapsed.gif);
+}
+div.sdmenu div a{
+	padding:5px 10px;
+	display:block;
+	color:#000000;
+}
+div.sdmenu div a.current{
+}
+div.sdmenu div a:hover{
+	text-decoration:none;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.technology.module.user.dao.UserDaoImpl">
+	<select id="queryUsers" parameterType="com.technology.module.user.dao.po.User" resultType="com.technology.module.user.dao.po.User">
+		select * from user
+	</select>
+	
+	<select id="countUsers" parameterType="com.technology.module.user.dao.po.User" resultType="int">
+	    select count(1) from user
+	</select>
+</mapper>

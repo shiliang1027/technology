@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="website_struts" extends="struts-default,website-default">
+		<interceptors>
+<!-- 			<interceptor name="website_page_stack" class="com.website.extend.struts.tag.page.PageInterceptor"></interceptor> -->
+			<interceptor name="website_sign_stack" class="com.baizhuan.interceptor.SignInterceptor"></interceptor>
+			<interceptor-stack name="website_stack">
+<!-- 				<interceptor-ref name="website_page_stack"/> -->
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="website_stack"/>
+		<global-results>
+		    <result name="error_ajax_sign" type="redirect">/main/error_ajax_sign.html</result>
+			<result name="error">/error/error.jsp</result>
+			<result name="ajax" type="ajax"></result>
+			<result name="file" type="file">
+			    <param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+			    <param name="contentDisposition">attachment;filename="${fileName}"</param>
+			</result>
+		</global-results>
+	</package>
+	
+	<!-- 应用程序初始配置 -->
+	<include file="com/system/config/struts-config.xml"></include>
+</struts>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/module.xsd">
+	<!-- 系统管理 -->
+	<module>
+		<id>systemManager</id>
+		<name>%CF%B5%CD%B3%B9%DC%C0%ED</name>
+		<desc>%CF%B5%CD%B3%B9%DC%C0%ED</desc>
+		<url></url>
+		<icon>systemManagerModule.jpg</icon>
+	</module>
+	
+	<!-- 安全管理 -->
+	<module>
+		<id>safeManager</id>
+		<name>%B0%B2%C8%AB%B9%DC%C0%ED</name>
+		<desc>%B0%B2%C8%AB%B9%DC%C0%ED</desc>
+		<url></url>
+		<icon>safeManagerModule.jpg</icon>
+	</module>
+	<!-- 菜单管理/menuManager.action -->
+	<module>
+		<id>menuManager</id>
+		<name>%B2%CB%B5%A5%B9%DC%C0%ED</name>
+		<desc>%B2%CB%B5%A5%B9%DC%C0%ED</desc>
+		<url>/manage/menu.html</url>
+		<icon>menuManagerModule.jpg</icon>
+	</module>
+	
+	<!-- 用户管理/userManager.action -->
+	<module>
+		<id>userManager</id>
+		<name>%D3%C3%BB%A7%B9%DC%C0%ED</name>
+		<desc>%D3%C3%BB%A7%B9%DC%C0%ED</desc>
+		<url>/manage/user.html</url>
+		<icon>userManagerModule.jpg</icon>
+	</module>
+	
+	<!-- 角色管理/roleManager.action -->
+	<module>
+		<id>roleManager</id>
+		<name>%BD%C7%C9%AB%B9%DC%C0%ED</name>
+		<desc>%BD%C7%C9%AB%B9%DC%C0%ED</desc>
+		<url>/manage/role.html</url>
+		<icon>roleManagerModule.jpg</icon>
+	</module>
+	
+	<!-- 状态监控 -->
+	<module>
+		<id>stateMonitor</id>
+		<name>%D7%B4%CC%AC%BC%E0%BF%D8</name>
+		<desc>%D7%B4%CC%AC%BC%E0%BF%D8</desc>
+		<url></url>
+		<icon>stateMonitorModule.jpg</icon>
+	</module>
+	
+</website-module>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-3-24 10:22:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.activiti.demo.dao.po.User" table="user">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="kind" type="java.lang.Integer">
+            <column name="kind" default="1">
+            </column>
+        </property>
+        <property name="state" type="java.lang.Integer">
+            <column name="state" default="1">
+            </column>
+        </property>
+        <property name="channel" type="java.lang.Integer">
+            <column name="channel" default="1">
+            </column>
+        </property>
+        <property name="system" type="java.lang.Integer">
+            <column name="system">
+            </column>
+        </property>
+        <property name="userid" type="string">
+            <column name="userid" length="30">
+            </column>
+        </property>
+        <property name="code" type="string">
+            <column name="code" length="30">
+            </column>
+        </property>
+        <property name="pwd" type="string">
+            <column name="pwd" length="32">
+            </column>
+        </property>
+        <property name="secretmobile" type="string">
+            <column name="secretmobile" length="30">
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="30">
+            </column>
+        </property>
+        <property name="nickname" type="string">
+            <column name="nickname" length="32">
+            </column>
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile" length="30">
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30">
+            </column>
+        </property>
+        <property name="tinyqq" type="string">
+            <column name="tinyqq">
+            </column>
+        </property>
+        <property name="qq" type="string">
+            <column name="qq" length="50">
+            </column>
+        </property>
+        <property name="weibo" type="string">
+            <column name="weibo" length="50">
+            </column>
+        </property>
+        <property name="renren" type="string">
+            <column name="renren" length="50">
+            </column>
+        </property>
+        <property name="createtime" type="timestamp">
+            <column name="createtime" length="19">
+            </column>
+        </property>
+        <property name="logintime" type="timestamp">
+            <column name="logintime" length="19">
+            </column>
+        </property>
+        <property name="loginip" type="string">
+            <column name="loginip" length="30">
+            </column>
+        </property>
+        <property name="property" type="java.lang.Integer">
+            <column name="property" default="0">
+            </column>
+        </property>
+        <property name="today" type="java.lang.Integer">
+            <column name="today" default="0">
+            </column>
+        </property>
+        <property name="daymax" type="java.lang.Integer">
+            <column name="daymax">
+            </column>
+        </property>
+        <property name="isreceive" type="java.lang.Integer">
+            <column name="isreceive" default="1">
+            </column>
+        </property>
+        <property name="isad" type="java.lang.Integer">
+            <column name="isad" default="1">
+            </column>
+        </property>
+        <property name="validcode" type="string">
+            <column name="validcode" length="30">
+            </column>
+        </property>
+        <property name="isvalid" type="java.lang.Integer">
+            <column name="isvalid" default="0">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

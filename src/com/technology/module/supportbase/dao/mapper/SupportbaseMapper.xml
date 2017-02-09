@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper
+	namespace="com.technology.module.supportbase.dao.po.Suppoortbase.SuppoortbaseDaoImpl">
+	<select id="querySupport"
+		parameterType="com.technology.module.supportbase.dao.po.Suppoortbase"
+		resultType="com.technology.module.supportbase.dao.po.Suppoortbase">
+		select * from suppoortbase
+	</select>
+
+	<insert id="saveSuppoortbase"
+		parameterType="com.technology.module.supportbase.dao.po.Suppoortbase">
+		insert into suppoortbase (id,serviceid,name) values
+		(#id#,#serviceid#,#name#)
+	</insert>
+	
+</mapper>

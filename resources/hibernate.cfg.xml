@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- MySQL -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<!-- 		<property name="connection.url">jdbc:mysql://192.168.4.22:3306/baizhuan?useUnicode=true&amp;characterEncoding=utf8</property> -->
+<!-- 		<property name="connection.username">root</property> -->
+<!-- 		<property name="connection.password">820831!Mm</property>  -->
+		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/website?useUnicode=true&amp;characterEncoding=utf8</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property> 
+		<property name="connection.autocommit">true</property>
+		<!-- MySQL -->
+		
+		<!-- Oracle -->
+<!-- 		<property name="dialect">org.hibernate.dialect.Oracle9Dialect</property> -->
+<!-- 		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property> -->
+<!-- 		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:WEBSITE</property> -->
+<!-- 		<property name="connection.username">website</property> -->
+<!-- 		<property name="connection.password">website</property>  -->
+<!-- 		<property name="connection.autocommit">true</property> -->
+		<!-- Oracle -->
+		
+		<!-- Use the Hibernate built-in pool for tests. -->
+		<property name="connection.pool_size">10</property>
+        <property name="hibernate.jdbc.batch_versioned_data">true</property>
+        <property name="hibernate.jdbc.batch_size">100</property>
+        <property name="hibernate.jdbc.fetch_size">50</property>
+        <property name="hibernate.connection.autocommit">true</property>
+		<!-- A simple in-memory Hashtable-based cache impl.
+	    <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>	
+		-->
+		<!-- Use EHCache but not the query cache. 
+		<property name="hibernate.cache.provider_class">net.sf.ehcache.hibernate.Provider</property>	
+		-->
+		<!-- Disable second-level cache, effectively --> 
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>	  
+		<property name="hibernate.cache.use_query_cache">false</property>
+		<property name="hibernate.cache.use_minimal_puts">false</property>
+
+		<!-- Print SQL to stdout. -->
+		<property name="show_sql">true</property>
+		
+		<!-- 系统基础表 -->
+		<mapping resource="com/system/config/dao/mapper/Module.hbm.xml"/>
+		<mapping resource="com/system/config/dao/mapper/Role.hbm.xml"/>
+		<mapping resource="com/system/config/dao/mapper/RoleModuleRelation.hbm.xml"/>
+		<mapping resource="com/system/config/dao/mapper/SystemUser.hbm.xml"/>
+		<!-- 系统基础表 -->
+		
+		<!-- 应用表 -->
+		<!-- 应用表 -->
+	</session-factory>
+</hibernate-configuration>

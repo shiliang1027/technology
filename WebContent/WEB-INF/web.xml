@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Archetype Created Web Application</display-name>
+
+	<!-- spring contextConfigLocation -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/classes/applicationContext*.xml
+		</param-value>
+	</context-param>
+
+	<!-- Shiro filter -->
+	<filter>
+		<filter-name>shiroFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>shiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- UrlRewriteFilter -->
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+		<init-param>
+			<param-name>logLevel</param-name>
+			<param-value>DEBUG</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	
+	
+	<!-- struts2 -->
+	<filter>
+		<filter-name>action2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>action2</filter-name>
+		<url-pattern>*.action</url-pattern>
+		<!-- 使用urlrewrite时加上下面配置 -->
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<!-- oscache -->
+<!-- 	<filter> -->
+<!-- 	<filter-name>CacheFilter</filter-name> -->
+<!-- 	<filter-class> -->
+<!-- 	com.opensymphony.oscache.web.filter.CacheFilter -->
+<!-- 	</filter-class> -->
+<!-- 	<init-param> -->
+<!-- 	<param-name>time</param-name> -->
+<!-- 	<param-value>360000</param-value> -->
+<!-- 	</init-param> -->
+<!-- 	<init-param> -->
+<!-- 	<param-name>scope</param-name> -->
+<!-- 	<param-value>session</param-value> -->
+<!-- 	</init-param> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 	<filter-name>CacheFilter</filter-name> -->
+<!-- 	<url-pattern>/*</url-pattern> -->
+<!-- 	</filter-mapping> -->
+
+
+	<!-- spring -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- start servlet -->
+	<servlet>
+		<servlet-name>configServlet</servlet-name>
+		<servlet-class>com.system.config.init.Servlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Kaptcha -->
+	<servlet>
+		<servlet-name>Kaptcha</servlet-name>
+		<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+		<init-param>
+			<description> Border around kaptcha. Legal values are yes or no. </description>
+			<param-name>kaptcha.border</param-name>
+			<param-value>no</param-value>
+		</init-param>
+		<init-param>
+			<description>Color of the border. Legal values are r,g,b (and optional alpha) or white,black,blue. </description>
+			<param-name>kaptcha.border.color</param-name>
+			<param-value>red</param-value>
+		</init-param>
+		<init-param>
+			<description>Thickness of the border around kaptcha. Legal values are > 0. </description>
+			<param-name>kaptcha.border.thickness</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<description>Width in pixels of the kaptcha image. </description>
+			<param-name>kaptcha.image.width</param-name>
+			<param-value>65</param-value>
+		</init-param>
+		<init-param>
+			<description>Height in pixels of the kaptcha image. </description>
+			<param-name>kaptcha.image.height</param-name>
+			<param-value>22</param-value>
+		</init-param>
+		<init-param>
+			<description>The image producer. </description>
+			<param-name>kaptcha.producer.impl</param-name>
+			<param-value>com.google.code.kaptcha.impl.DefaultKaptcha </param-value>
+		</init-param>
+		<init-param>
+			<description>The text producer. </description>
+			<param-name>kaptcha.textproducer.impl</param-name>
+			<param-value>com.google.code.kaptcha.text.impl.DefaultTextCreator</param-value>
+		</init-param>
+		<init-param>
+			<description>The characters that will create the kaptcha. </description>
+			<param-name>kaptcha.textproducer.char.string</param-name>
+			<param-value>0123456789</param-value>
+		</init-param>
+		<init-param>
+			<description>The number of characters to display. </description>
+			<param-name>kaptcha.textproducer.char.length</param-name>
+			<param-value>4</param-value>
+		</init-param>
+		<init-param>
+			<description>A list of comma separated font names.</description>
+			<param-name>kaptcha.textproducer.font.names</param-name>
+			<param-value>Arial, Courier</param-value>
+		</init-param>
+		<init-param>
+			<description>The size of the font to use. </description>
+			<param-name>kaptcha.textproducer.font.size</param-name>
+			<param-value>20</param-value>
+		</init-param>
+		<init-param>
+			<description>The color to use for the font. Legal values are red,green,black. </description>
+			<param-name>kaptcha.textproducer.font.color</param-name>
+			<param-value>black</param-value>
+		</init-param>
+		<init-param>
+			<description>The noise producer. </description>
+			<param-name>kaptcha.noise.impl</param-name>
+			<param-value>com.google.code.kaptcha.impl.NoNoise </param-value>
+		</init-param>
+		<init-param>
+			<description>The noise color. Legal values are r,g,b. </description>
+			<param-name>kaptcha.noise.color</param-name>
+			<param-value>black</param-value>
+		</init-param>
+		<init-param>
+			<description>The obscurificator implementation. </description>
+			<param-name>kaptcha.obscurificator.impl</param-name>
+			<param-value>com.google.code.kaptcha.impl.ShadowGimpy</param-value>
+		</init-param>
+		<init-param>
+			<description>The background implementation. </description>
+			<param-name>kaptcha.background.impl</param-name>
+			<param-value>com.google.code.kaptcha.impl.DefaultBackground</param-value>
+		</init-param>
+		<init-param>
+			<description>Ending background color. Legal values are r,g,b. </description>
+			<param-name>kaptcha.background.clear.to</param-name>
+			<param-value>white</param-value>
+		</init-param>
+		<init-param>
+			<description>The word renderer implementation. </description>
+			<param-name>kaptcha.word.impl</param-name>
+			<param-value>com.google.code.kaptcha.text.impl.DefaultWordRenderer</param-value>
+		</init-param>
+		<init-param>
+			<description>The value for the kaptcha is generated and is put into the HttpSession. This is the key value for that item in the session. </description>
+			<param-name>kaptcha.session.key</param-name>
+			<param-value>KAPTCHA_SESSION_KEY</param-value>
+		</init-param>
+		<init-param>
+			<description>The date the kaptcha is generated is put into the HttpSession. This is the key value for that item in the session. </description>
+			<param-name>kaptcha.session.date</param-name>
+			<param-value>KAPTCHA_SESSION_DATE</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Kaptcha</servlet-name>
+		<url-pattern>/images/securityCode.jpg</url-pattern>
+	</servlet-mapping>
+	<!-- error page -->
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/error.jsp</location>
+	</error-page>
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

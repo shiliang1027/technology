@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website-security xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/security.xsd">
+	<application>
+		<defaultLocale>zh_CN</defaultLocale>
+		<allowChangeLocale>true</allowChangeLocale>
+		<reCreateTable>true</reCreateTable>
+	</application>
+	<!-- 游客 -->
+	<role>
+		<name>role_guest</name>
+		<allowLookAndFeel>true</allowLookAndFeel>
+		<allowLayout>true</allowLayout>
+		<allowAddTab>true</allowAddTab>
+		<allowAddContent>true</allowAddContent>
+		<allowSignIn>true</allowSignIn>
+		<allowTurnOff>true</allowTurnOff>
+		<title>%D3%CE%BF%CD</title>
+		<theme>1</theme>
+	</role>
+	<!-- 超级管理员 -->
+	<role>
+		<name>role_admin</name>
+		<allowLookAndFeel>true</allowLookAndFeel>
+		<allowLayout>true</allowLayout>
+		<allowAddTab>true</allowAddTab>
+		<allowAddContent>true</allowAddContent>
+		<allowSignIn>true</allowSignIn>
+		<allowTurnOff>true</allowTurnOff>
+		<title>%B3%AC%BC%B6%B9%DC%C0%ED%D4%B1</title>
+		<theme>2</theme>
+		<users>
+			<user>
+				<name>admin</name>
+				<password>12345</password>
+				<firstName>admin</firstName>
+				<middleName></middleName>
+				<lastName></lastName>
+				<email>admin@admin.com</email>
+			</user>
+		</users>
+
+		<modules>
+			<!-- 一级模块 -->
+			<!-- 系统管理 -->
+			<module>
+				<id>systemManager</id>
+				<!-- 二级模块 -->
+				<modules>
+					<!-- 安全管理 -->
+					<module>
+						<id>safeManager</id>
+						<!-- 三级管理 -->
+						<modules>
+							<!-- 菜单管理 -->
+							<module>
+								<id>menuManager</id>
+							</module>
+							<!-- 用户管理 -->
+							<module>
+								<id>userManager</id>
+							</module>
+							<!-- 角色管理 -->
+							<module>
+								<id>roleManager</id>
+							</module>
+						</modules>
+					</module>
+					<!-- 状态监控 -->
+					<module>
+						<id>stateMonitor</id>
+					</module>
+				</modules>
+			</module>
+		</modules>
+	</role>
+	<!-- 成员 -->
+	<role>
+		<name>role_user</name>
+		<allowLookAndFeel>true</allowLookAndFeel>
+		<allowLayout>true</allowLayout>
+		<allowAddTab>true</allowAddTab>
+		<allowAddContent>true</allowAddContent>
+		<allowSignIn>true</allowSignIn>
+		<allowTurnOff>true</allowTurnOff>
+		<title>%B3%C9%D4%B1</title>
+		<theme>3</theme>
+	</role>
+	<!-- 好友 -->
+	<role>
+		<name>role_friend</name>
+		<allowLookAndFeel>true</allowLookAndFeel>
+		<allowLayout>true</allowLayout>
+		<allowAddTab>true</allowAddTab>
+		<allowAddContent>true</allowAddContent>
+		<allowSignIn>true</allowSignIn>
+		<allowTurnOff>true</allowTurnOff>
+		<title>%BA%C3%D3%D1</title>
+		<theme>4</theme>
+	</role>	
+</website-security>
